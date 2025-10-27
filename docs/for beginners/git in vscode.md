@@ -9,11 +9,11 @@
 
 регаемся https://github.com сразу заходим в [настройки](https://github.com/settings/emails), чекаем свои email и username 
 
-![git-geting-started-username-eamil](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-username-eamil.png){ align=left width="300"}
+![git-geting-started-username-eamil](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-username-eamil.png){ align=left width="500"}
 
 
 ### открываем vscode, открываем терминал
-![git-geting-started-username-eamil](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-terminal.png){ align=left }{ width="300" }
+![git-geting-started-username-eamil](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-terminal.png){ align=left width="500"}
 
 
 
@@ -27,19 +27,19 @@
 
 https://github.com/tsenturion/inueco делаем форк  
 
-![git-geting-started-making-fork](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-making-fork.png){ align=left }
+![git-geting-started-making-fork](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-making-fork.png){ align=left width="500"}
 
 
 ### Возвращаемся в vscode
 
 Клонируем наш репозиторий, тыкаем сюда
 
-![git-geting-started-clone-git-repo](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-git-repo.png){ align=left }
+![git-geting-started-clone-git-repo](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-git-repo.png){ align=left width="500"}
 
 
 Выбираем нужный репозиторий, в нашем случае это будет что-то типа https://github.com/вашюзернейм/inueco.git вот его и выбираем
 
-![git-geting-started-clone-git-repo-choose](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-git-repo-choose.png){ align=left }
+![git-geting-started-clone-git-repo-choose](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-git-repo-choose.png){ align=left width="500"}
 
 
 Прежде чем продолжить устанавливаем:
@@ -47,13 +47,13 @@ https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-g
 
 Лучше делать это через вкладку extensions
 
-![git-geting-started-clone-extensions-installing](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-extensions-installing.png){ align=left }
+![git-geting-started-clone-extensions-installing](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-extensions-installing.png){ align=left width="500"}
 
 
 
 Вбиваем туда identifier: `github.vscode-pull-request-github`, бтв следующие дополнения будем устанавливать также, так шо привыкайте, тыкаем установить буквально единственная синяя кнопка, но на всякий случай:
 
-![git-geting-started-clone-extensions-installing2](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-extensions-installing2.png){ align=left }
+![git-geting-started-clone-extensions-installing2](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-extensions-installing2.png){ align=left width="500"}
 
 
 
@@ -63,12 +63,12 @@ https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-g
 ### git pull from upstream
 Как получить изменения, когда он что-то сделал там у себя - тыкаем 
 
-![git-geting-started-pull-from-upstream](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-from-upstream.png){ align=left }
+![git-geting-started-pull-from-upstream](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-from-upstream.png){ align=left width="500"}
 
 
 ### Далее ОБЯЗАТЕЛЬНО тыкаем main, HEAD ваще может на любую хуйню ссылаться, лучше не тыкайте его пока
 
-![git-geting-started-pull-from-upstream2](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-from-upstream2.png){ align=left }
+![git-geting-started-pull-from-upstream2](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-from-upstream2.png){ align=left width="500"}
 
 
 ### Это же мы выполняем, если преподаватель скажет, что что-то поправил. 
@@ -86,33 +86,33 @@ https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-g
 кароч: Просто делайте новую ветку на каждую пару. 
 
 
-![git-geting-started-create-branch](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch.png){ align=left }
+![git-geting-started-create-branch](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch.png){ align=left width="500"}
 
 
 
 сюда прописываем название, лучше по сегодняшней дате называйте, шоб потом мало ли его найти. 
 
 
-![git-geting-started-create-branch2](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch2.png){ align=left }
+![git-geting-started-create-branch2](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch2.png){ align=left width="500"}
 
 
 
 Публикуем, сообщение писать не надо, просто тыкаем синюю кнопку
 
-![git-geting-started-create-branch3](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch3.png){ align=left }
+![git-geting-started-create-branch3](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch3.png){ align=left width="500"}
 
 
 
 Выбираем origin 
 
-![git-geting-started-create-branch4](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch4.png){ align=left }
+![git-geting-started-create-branch4](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch4.png){ align=left width="500"}
 
 
 
 
 Проверка, что всё получилось - пишем в терминале git branch, если всё кайф, то * и зелёным цветом выделится ваша ветка. Если звёздочка возле main, и ваша ветка не отображается - вы что то сделали не так. 
 
-![git-geting-started-create-branch5](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch5.png){ align=left }
+![git-geting-started-create-branch5](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch5.png){ align=left width="500"}
 
 
 
@@ -120,44 +120,44 @@ https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-g
 
 дальше делайте шо нужно, создавайте новые файлы, кароч питонируйте там по жоскому. 
 
-![git-geting-started-creating-commit](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit.png){ align=left }
+![git-geting-started-creating-commit](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit.png){ align=left width="500"}
 
 
 
 Дальше выбираем только те файлы, которые мы сами редактировали или создавали. Обязательно пишем сообщение и жмём большую синюю кнопку commit
 
-![git-geting-started-creating-commit2](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit2.png){ align=left }
+![git-geting-started-creating-commit2](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit2.png){ align=left width="500"}
 
 
 
 не напишите сообщение в окно - откроется такое окно
 просто напишите своё сообщение в нём, сохраните файл ctrl+s и закройте эту вкладочку
 
-![git-geting-started-creating-commit3](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit3.png){ align=left }
+![git-geting-started-creating-commit3](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit3.png){ align=left width="500"}
 
 
 
 Лишние файлы удаляем - или тыкаем discard changes - нам предложат удалить файл, либо удаляем ручками во вкладке проекта
 
-![git-geting-started-creating-commit4](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit4.png){ align=left }
+![git-geting-started-creating-commit4](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit4.png){ align=left width="500"}
 
 
 
 ### Отправляем изменения в github
 
-![git-geting-started-creating-commit5](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit5.png){ align=left }
+![git-geting-started-creating-commit5](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit5.png){ align=left width="500"}
 
 
 
 Создаём пулл реквест, чтобы преподаватель увидел наши результаты:
 
-![git-geting-started-pull-request](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-request.png){ align=left }
+![git-geting-started-pull-request](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-request.png){ align=left width="500"}
 
 
 
 откроется окно, в title пишем фамилию, дату и группу, тыкаем create
 
-![git-geting-started-pull-request2](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-request2.png){ align=left }
+![git-geting-started-pull-request2](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-request2.png){ align=left width="500"}
 
 
 
@@ -165,13 +165,13 @@ https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-g
 
 Возвращаемся обратно в main ветку, чтобы потом новые ветки создавались "чистыми". Кароч это нужно сделать, поверьте.
 
-![git-geting-started-checkout](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-checkout.png){ align=left }
+![git-geting-started-checkout](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-checkout.png){ align=left width="500"}
 
 
 
 ОБЯЗАТЕЛЬНО выбираем origin/main
 
-![git-geting-started-checkout2](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-checkout2.png){ align=left }
+![git-geting-started-checkout2](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-checkout2.png){ align=left width="500"}
 
 
 
