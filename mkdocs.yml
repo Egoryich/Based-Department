@@ -11,6 +11,7 @@ theme:
   features:
     - navigation.path
     - toc.integrate
+    - content.tabs.link
   palette:
     scheme: slate
     primary: grey
