@@ -1,3 +1,5 @@
+# Как юзать git и github в vscode
+
 ## Пора разобраться с гитом вэсэкодом и гитхабом
 
 ### Если вы используете github desktop - удалите его к чертям
@@ -7,11 +9,11 @@
 
 регаемся https://github.com сразу заходим в [настройки](https://github.com/settings/emails), чекаем свои email и username 
 
-![git-geting-started-username-eamil](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-username-eamil.png){ align=left }
+![git-geting-started-username-eamil](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-username-eamil.png){ align=left width="300"}
 
 
 ### открываем vscode, открываем терминал
-![git-geting-started-username-eamil](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-terminal.png){ align=left }
+![git-geting-started-username-eamil](https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-terminal.png){ align=left }{ width="300" }
 
 
 
