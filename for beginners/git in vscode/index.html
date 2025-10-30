@@ -1,0 +1,826 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://egoryich.github.io/Based-Department/for%20beginners/git%20in%20vscode/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../../git/git%20basics/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Как юзать git и github в vscode - Based-Department</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git-github-vscode" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Based-Department" class="md-header__button md-logo" aria-label="Based-Department" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Based-Department
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Как юзать git и github в vscode
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Based-Department" class="md-nav__button md-logo" aria-label="Based-Department" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Based-Department
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Главная
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    For beginners
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            For beginners
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Как юзать git и github в vscode
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Как юзать git и github в vscode
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Базовые настройки
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      Делаем fork
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Установка расширения для гитхаба
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-pull-from-upstream" class="md-nav__link">
+    <span class="md-ellipsis">
+      git pull from upstream
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Мы готовы к работе
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Следующее шо мы делаем - создаём ветку, или иными словами branch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Можно выполнять задание
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Отправляем изменения в github
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      на этом всё! почти...
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/git%20basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Основные команды git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python%20basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python с чего начать?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="git-github-vscode">Как юзать git и github в vscode</h1>
+<div class="admonition tip">
+<p class="admonition-title">Важно</p>
+<p>Если вы используете github desktop - удалите его к чертям</p>
+</div>
+<p>скачиваем, если ещё не скачали https://code.visualstudio.com/ https://git-scm.com/
+<br><br></p>
+<figure>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-username-eamil.png" data-desc-position="bottom"><img align="right" alt="git-geting-started-username-eamil" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-username-eamil.png" width="500"></a>
+
+регаемся https://github.com сразу заходим в <a href="https://github.com/settings/emails">настройки</a>, <strong>чекаем свои email и username</strong>
+</figure>
+<h2 id="_1">Базовые настройки</h2>
+<figure>
+
+открываем vscode, открываем терминал<br><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-terminal.png" data-desc-position="bottom"><img align="left" alt="git-geting-started-username-eamil" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-terminal.png" width="500"></a>
+
+
+
+вставляем туда по очереди эти две команды, предварительно меняем юзернаме и емаил на свои
+<br><br>
+
+<code>git config --global user.email "you@example.com"</code>
+
+<br>
+
+<code>git config --global user.name "Your Name"</code>
+
+</figure>
+<h2 id="fork">Делаем fork</h2>
+<figure>
+
+Пока переходим в гитхабыч:<br><br>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-making-fork.png" data-desc-position="bottom"><img align="left" alt="git-geting-started-making-fork" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-making-fork.png" width="500"></a>
+
+
+
+https://github.com/tsenturion/inueco делаем форк 
+</figure>
+<figure>
+Возвращаемся в vscode
+
+
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-git-repo.png" data-desc-position="bottom"><img alt="git-geting-started-clone-git-repo" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-git-repo.png" width="500"></a>
+
+<figcaption>Клонируем наш репозиторий, тыкаем сюда</figcaption>
+</figure>
+<figure>
+
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-git-repo-choose.png" data-desc-position="bottom"><img align="left" alt="git-geting-started-clone-git-repo-choose" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-git-repo-choose.png" width="500"></a>
+
+
+Выбираем нужный репозиторий, в нашем случае это будет что-то типа https://github.com/вашюзернейм/inueco.git вот его и выбираем
+</figure>
+<h2 id="_2">Установка расширения для гитхаба</h2>
+<p>Прежде чем продолжить устанавливаем:
+https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github</p>
+<figure>
+Лучше делать это через вкладку extensions
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-extensions-installing.png" data-desc-position="bottom"><img align="left" alt="git-geting-started-clone-extensions-installing" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-extensions-installing.png" width="500"></a>
+
+
+
+Вбиваем туда identifier: <code>github.vscode-pull-request-github</code>, бтв следующие дополнения будем устанавливать также, так шо привыкайте
+
+</figure>
+<figure>
+тыкаем установить буквально единственная синяя кнопка, но на всякий случай:
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-extensions-installing2.png" data-desc-position="bottom"><img alt="git-geting-started-clone-extensions-installing2" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-clone-extensions-installing2.png" width="500"></a>
+
+<figcaption></figcaption>
+</figure>
+<p>Далее в терминал вбиваем <code>git pull --all</code> чтобы получить вообще все изменения, которые происходили. Если не сделаете ,не сможете через кнопку пулить изменения с апстрим репозитория. Кароч это нужно сделать, поверьте.</p>
+<h2 id="git-pull-from-upstream">git pull from upstream</h2>
+<p>Как получить изменения, когда преподаватель что-то сделал там у себя, грит обновитесь - тыкаем </p>
+<figure>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-from-upstream.png" data-desc-position="bottom"><img alt="git-geting-started-pull-from-upstream" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-from-upstream.png" width="500"></a>
+
+<figcaption></figcaption>
+</figure>
+<figure>
+<strong>Далее ОБЯЗАТЕЛЬНО тыкаем main</strong>, HEAD ваще может на любую хуйню ссылаться, лучше не тыкайте его пока
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-from-upstream2.png" data-desc-position="bottom"><img alt="git-geting-started-pull-from-upstream2" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-from-upstream2.png" width="500"></a>
+
+<figcaption></figcaption>
+</figure>
+<p>Всё тоже самое мы выполняем, если преподаватель скажет, что что-то поправил. </p>
+<h2 id="_3">Мы готовы к работе</h2>
+<p>дальше пришли такие на пару, нам дали задание, делаем в интерфейсе vs code <a href="#git-pull-from-upstream">git pull from upstream</a> как мы это делали на шаге раньше, вобщем привыкайте, будем делать это часто. </p>
+<h2 id="-branch">Следующее шо мы делаем - создаём ветку, или иными словами branch</h2>
+<p>это надо, шоб лишние файлы не влетали в ваш pull request, если не будете создавать ветки, то когда в следующий раз будете выполнять задание, то в пул реквест будут попадать файлы с предыдущих практик, нам такое не надо, шоб лишних вопросов к нам не было. </p>
+<p>кароч: Просто делайте новую ветку на каждую пару. </p>
+<figure>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch.png" data-desc-position="bottom"><img alt="git-geting-started-create-branch" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch.png" width="500"></a>
+
+<figcaption></figcaption>
+</figure>
+<figure>
+
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch2.png" data-desc-position="bottom"><img align="left" alt="git-geting-started-create-branch2" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch2.png" width="500"></a>
+сюда прописываем название, лучше по сегодняшней дате называйте, шоб потом мало ли его найти. 
+
+</figure>
+<figure>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch3.png" data-desc-position="bottom"><img align="right" alt="git-geting-started-create-branch3" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch3.png" width="500"></a>
+Публикуем, сообщение писать не надо, просто тыкаем синюю кнопку
+
+</figure>
+<figure>
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch4.png" data-desc-position="bottom"><img alt="git-geting-started-create-branch4" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch4.png" width="500"></a>
+
+Выбираем origin 
+
+</figure>
+<figure>
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch5.png" data-desc-position="bottom"><img align="left" alt="git-geting-started-create-branch5" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-create-branch5.png" width="500"></a>
+
+Проверка, что всё получилось - пишем в терминале git branch, если всё кайф, то * и зелёным цветом выделится ваша ветка. Если звёздочка возле main, и ваша ветка не отображается - вы что то сделали не так. 
+
+</figure>
+<h2 id="_4">Можно выполнять задание</h2>
+<div class="admonition tip">
+<p class="admonition-title">Работайте братья</p>
+<p>дальше делайте шо нужно, создавайте новые файлы, кароч питонируйте там по жоскому. </p>
+</div>
+<figure>
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit2.png" data-desc-position="bottom"><img align="left" alt="git-geting-started-creating-commit2" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit2.png" width="500"></a>
+
+Дальше выбираем только те файлы, которые мы сами редактировали или создавали. Обязательно пишем сообщение и жмём большую синюю кнопку commit
+</figure>
+<figure>
+
+
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit3.png" data-desc-position="bottom"><img align="right" alt="git-geting-started-creating-commit3" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit3.png" width="500"></a>
+Если не напишите сообщение в окно это не страшно - откроется такое окно, паниковать не надо, ничего не сломалось
+просто напишите своё сообщение в нём, сохраните файл ctrl+s и закройте эту вкладочку
+</figure>
+<figure>
+
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit4.png" data-desc-position="bottom"><img align="left" alt="git-geting-started-creating-commit4" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit4.png" width="500"></a>
+Если в процессе появились лишние файлы, ну например вы тест запустили или ещё какую нибудь новую весёлую фигню, то л ишние файлы удаляем - или тыкаем discard changes - нам предложат удалить файл, либо удаляем ручками во вкладке проекта
+
+</figure>
+<h2 id="github">Отправляем изменения в github</h2>
+<figure>
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit5.png" data-desc-position="bottom"><img align="left" alt="git-geting-started-creating-commit5" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-creating-commit5.png" width="500"></a>
+
+</figure>
+<figure>
+
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-request.png" data-desc-position="bottom"><img align="left" alt="git-geting-started-pull-request" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-request.png" width="500"></a>
+Создаём пулл реквест, чтобы преподаватель увидел наши результаты:
+
+</figure>
+<figure>
+
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-request2.png" data-desc-position="bottom"><img align="right" alt="git-geting-started-pull-request2" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-pull-request2.png" width="500"></a>
+откроется окно, в title пишем фамилию, дату и группу, тыкаем create
+
+</figure>
+<h2 id="_5">на этом всё! почти...</h2>
+<p>Возвращаемся обратно в main ветку, чтобы потом новые ветки создавались "чистыми". Кароч это нужно сделать, поверьте.</p>
+<figure>
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-checkout.png" data-desc-position="bottom"><img align="left" alt="git-geting-started-checkout" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-checkout.png" width="500"></a>
+</figure>
+<figure>
+
+ОБЯЗАТЕЛЬНО выбираем origin/main
+
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-checkout2.png" data-desc-position="bottom"><img align="left" alt="git-geting-started-checkout2" src="https://raw.githubusercontent.com/Egoryich/Based-Department/refs/heads/main/images/get_started_inueco_git/git-geting-started-checkout2.png" width="500"></a>
+</figure>
+<p>Ну и вспоминаем как мы делали <a href="#git-pull-from-upstream">git pull from upstream</a> через кнопки vscode или просто в консоль вбиваем <code>git pull upstream main</code></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 bazovichki
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>
