@@ -1,0 +1,760 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://egoryich.github.io/Based-Department/Algo-basics/algo-base/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../../IS%20Acrhitect/isarch/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Algo base - Based-Department</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Based-Department" class="md-header__button md-logo" aria-label="Based-Department" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Based-Department
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Algo base
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Based-Department" class="md-nav__button md-logo" aria-label="Based-Department" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Based-Department
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Главная
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algo basics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Algo basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Algo base
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    IS Acrhitect
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            IS Acrhitect
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IS%20Acrhitect/isarch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Архитектура информационных систем
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    For beginners
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            For beginners
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for%20beginners/git%20in%20vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Как юзать git и github в vscode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/git%20basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Основные команды git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python%20basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python с чего начать?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Algo base</h1>
+
+<p>Неделя 1-2: Углубление в структуры данных
+text
+1. Связные списки (односвязные, двусвязные)
+2. Стеки и очереди
+3. Деревья (бинарные, BST, AVL)
+4. Хеш-таблицы (углубленно)
+5. Графы (представление, обход)
+6. Кучи и приоритетные очереди
+Неделя 3-4: Алгоритмы поиска и рекурсия
+text
+1. Бинарный поиск
+2. Рекурсия: принципы и практика
+3. Backtracking алгоритмы
+4. Поиск в глубину (DFS)
+5. Поиск в ширину (BFS)
+6. Алгоритмы на графах
+Неделя 5-6: Динамическое программирование
+text
+1. Принцип оптимальности Беллмана
+2. Мемоизация и табуляция
+3. Классические задачи ДП
+4. Жадные алгоритмы
+5. Сравнение подходов
+Неделя 7-8: Практическое применение
+text
+1. Работа с файлами (JSON, CSV)
+2. Обработка исключений
+3. Unit-тестирование (pytest)
+4. Проект: реализация структуры данных
+5. Проект: решение алгоритмических задач</p>
+<p>Неделя 1 — Введение и основы</p>
+<p>Темы: алгоритм, псевдокод, сложность (время/память), Big-O, простые примеры.</p>
+<p>Упражнения: реализовать и проанализировать линейный и бинарный поиск.</p>
+<p>Практика: 3 простые задачи (поиск, суммирование).</p>
+<p>Инструменты: настроить окружение (VSCode/PyCharm), GitHub.</p>
+<p>Неделя 2 — Массивы и строки</p>
+<p>Темы: операции с массивами/строками, слайсы, in-place модификации.</p>
+<p>Упражнения: переворот массива, поиск подстроки, частотный подсчёт символов.</p>
+<p>Практика: 4–5 задач со строками и массивами.</p>
+<p>Неделя 3 — Стеки, очереди, дек</p>
+<p>Темы: LIFO/FIFO, реализация через массивы/связаные списки, применение (парсинг, backtracking).</p>
+<p>Упражнения: проверка скобочной последовательности, реализация очереди через два стека.</p>
+<p>Неделя 4 — Связанные списки</p>
+<p>Темы: односвязный/двусвязный список, операции вставки/удаления, указатели/ссылки.</p>
+<p>Упражнения: удаление k-го с конца, реверс списка.</p>
+<p>Неделя 5 — Рекурсия и разбиение задач</p>
+<p>Темы: рекурсия, стек вызовов, мемоизация.</p>
+<p>Упражнения: факториал, фибоначчи (рекурсивно, с мемоизацией, итеративно), backtracking (генерация подмножеств).</p>
+<p>Неделя 6 — Сортировки и анализ</p>
+<p>Темы: пузырёк/вставками/выбором (для понимания), быстрая сортировка, сортировка слиянием, пирамидальная сортировка; стабильность сортировок.</p>
+<p>Упражнения: реализовать merge sort и quicksort, сравнить по времени на больших массивах.</p>
+<p>Неделя 7 — Хэш-таблицы (словари)</p>
+<p>Темы: хеширование, коллизии, load factor, применение.</p>
+<p>Упражнения: реализовать простую хеш-таблицу на языке (или использовать встроенную) и решать задачи на частоту элементов.</p>
+<p>Неделя 8 — Деревья (бинарные деревья)</p>
+<p>Темы: бинарное дерево, обходы (in/pre/post), высота, сбалансированные и несбалансированные деревья.</p>
+<p>Упражнения: обходы, поиск глубины, проверка сбалансированности.</p>
+<p>Неделя 9 — Двоичное дерево поиска (BST) и дерево отрезков/фенвик (опционально)</p>
+<p>Темы: вставка/удаление в BST, свойства. Fenwick/Segment Tree (основы, если надо).</p>
+<p>Упражнения: реализовать BST; простые задачи на диапазонные запросы (Fenwick).</p>
+<p>Неделя 10 — Кучи (heaps)</p>
+<p>Темы: реализация кучи, priority queue, сортировка через кучу, top-k задачи.</p>
+<p>Упражнения: найти k-й элемент, merge k sorted lists.</p>
+<p>Неделя 11 — Графы: представления и обходы</p>
+<p>Темы: матрица смежности vs список смежности, BFS, DFS, ориентированные/неориентированные графы.</p>
+<p>Упражнения: реализация BFS/DFS, связные компоненты, кратчайший путь в невзвешенном графе.</p>
+<p>Неделя 12 — Графы: алгоритмы кратчайшего пути и MST</p>
+<p>Темы: Dijkstra, Bellman-Ford (основная идея), алгоритмы MST: Kruskal, Prim.</p>
+<p>Упражнения: реализовать Dijkstra (через priority queue), MST на простом графе.</p>
+<p>Неделя 13 — Динамическое программирование (DP)</p>
+<p>Темы: подход «разбей на подзадачи», таблицы/мемоизация, типичные шаблоны (knapsack, LIS, DP по состояниям).</p>
+<p>Упражнения: Fibonacci DP, Knapsack 0/1, Longest Increasing Subsequence, DP на строках (LCS, edit distance).</p>
+<p>Неделя 14 — Жадные алгоритмы, приблизительные алгоритмы</p>
+<p>Темы: критерии корректности жадных решений, примеры (interval scheduling, Huffman).</p>
+<p>Упражнения: задачи на жадные стратегии, сравнение с DP.</p>
+<p>Неделя 15 — Параллельность, асинхронность, практики разработки</p>
+<p>Темы: потоки/процессы, async/await (язык-зависимо), проблемы гонок, блокировки, основы конкурентности.</p>
+<p>Технологии: основы Docker, CI (GitHub Actions), мониторинг (очень поверхностно).</p>
+<p>Упражнения: написать простую многопоточную программу, контейнеризировать приложение.</p>
+<p>Неделя 16 — Итоговый проект и подготовка к собеседованиям</p>
+<p>Проект: реализовать одно из предложенных (см. ниже) и запушить на GitHub с README + тестами.</p>
+<p>Подготовка: ревью решений, 10–15 задач из разных тем для закрепления.</p>
+<p>Финальная проверка: список знаний/список задач, которые ты должен уметь решать.</p>
+<p>Проекты (капстоун)</p>
+<p>Выбери 1–2 проекта, каждый занимает 1–3 недели:</p>
+<p>Алго-визуализатор — web-интерфейс, который визуализирует сортировки, BFS/DFS, Dijkstra. Технологии: JavaScript/React или Python + визуализация.</p>
+<p>CLI-инструмент для анализа логов — чтение больших файлов, подсчёт частот, top-k, использование потоковой обработки, юнит-тесты.</p>
+<p>Сервис “ToDo” с поиском и фильтрацией — реализовать API (REST), бэкенд с БД, пагинация, простая аутентификация, unit/integration тесты, Dockerfile.</p>
+<p>Решатель задач (кодовый бот) — парсер входных данных, выбор оптимального алгоритма (например, knapsack + greedy fallback), тесты, нагрузочное тестирование.</p>
+<p>Каждый проект: README с описанием сложности, выбранных структур и компромиссов.</p>
+<p>Книги и курсы (короткий список)</p>
+<p>"Introduction to Algorithms" (CLRS) — для глубины (учебник).</p>
+<p>"The Algorithm Design Manual" — практичные приёмы и библиотека задач.</p>
+<p>"Grokking Algorithms" — для визуального и интуитивного понимания.</p>
+<p>Онлайн: Coursera (Algorithms by Princeton / Stanford), MIT OCW (6.006), freeCodeCamp — видео-курсы и практические задания.</p>
+<p>Для немедленного применения:
+Практика на LeetCode/HackerRank - начинать с easy, переходить к medium</p>
+<p>Реализовать недостающие структуры данных - LinkedList, Stack, Queue</p>
+<p>Изучить библиотеку collections - deque, Counter, defaultdict</p>
+<p>Дополнительные ресурсы:
+"Грокаем алгоритмы" Адитья Бхаргава</p>
+<p>"Python Tricks" Дэна Бейдера</p>
+<p>LeetCode Patterns для системного подхода</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 bazovichki
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

@@ -1,0 +1,838 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://egoryich.github.io/Based-Department/IS%20Acrhitect/isarch/">
+      
+      
+        <link rel="prev" href="../../Algo-basics/algo-base/">
+      
+      
+        <link rel="next" href="../../for%20beginners/git%20in%20vscode/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Архитектура информационных систем - Based-Department</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans:300,300i,400,400i,700,700i%7CRed+Hat+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Merriweather Sans";--md-code-font:"Red Hat Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="grey" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#security-checklist" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Based-Department" class="md-header__button md-logo" aria-label="Based-Department" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Based-Department
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Архитектура информационных систем
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Based-Department" class="md-nav__button md-logo" aria-label="Based-Department" data-md-component="logo">
+      
+  <img src="../../assets/logo.png" alt="logo">
+
+    </a>
+    Based-Department
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Главная
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Algo basics
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Algo basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Algo-basics/algo-base/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Algo base
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    IS Acrhitect
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            IS Acrhitect
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Архитектура информационных систем
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Архитектура информационных систем
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#security-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      Результат: security checklist + дашборд с метриками.
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    For beginners
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            For beginners
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../for%20beginners/git%20in%20vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Как юзать git и github в vscode
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5">
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../git/git%20basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Основные команды git
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6">
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Python
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python%20basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Python с чего начать?
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Архитектура информационных систем</h1>
+
+<ol>
+<li>Сетевые модели и архитектура:</li>
+</ol>
+<p>Модель OSI (все 7 уровней с детальным разбором)</p>
+<p>Сетевые протоколы и их применение</p>
+<p>Принципы сетевого взаимодействия</p>
+<p>Тема: ОС, сети в 10–15 минутах, как работают HTTP, DNS, TLS; базы данных — реляционные vs NoSQL; основы многозадачности, потоки и процессы.</p>
+<p>Что делать: пройти вводный курс по компьютерным сетям + базам данных; поднять локально PostgreSQL, сделать простую CRUD app.</p>
+<p>Результат: краткая шпаргалка «как работает запрос от браузера до БД».</p>
+<ol>
+<li>Применение сетевых моделей в реальных системах</li>
+<li>Как HTTP/TCP/IP работают в веб-приложениях</li>
+<li>
+<p>Практика: анализ сетевых запросов браузера</p>
+</li>
+<li>
+<p>Базы данных в архитектуре ИС</p>
+</li>
+<li>Реляционные vs NoSQL</li>
+<li>Паттерны доступа к данным</li>
+<li>
+<p>Практика: проектирование простой БД</p>
+</li>
+<li>
+<p>Веб-архитектура</p>
+</li>
+<li>REST API, HTTP-методы, статусы</li>
+<li>Практика: создание простого API</li>
+</ol>
+<hr>
+<ol>
+<li>Проектирование систем</li>
+</ol>
+<p>UML-диаграммы классов</p>
+<p>Принципы модульной архитектуры</p>
+<p>Разделение ответственности (input/process/output)</p>
+<p>Тема: уровни архитектуры (presentation, application, data, integration), монолит vs мономикросервис (microservices), CQRS, Event-Driven, Layered, Hexagonal/Ports &amp; Adapters, SOA, API-first.</p>
+<p>Что делать: изучить C4-модель и UML (класс/последовательность), прочитать кейсы архитектур.</p>
+<p>Практика: спроектировать архитектуру простого интернет-магазина — 3 диаграммы C4 + ADR (архитектурные решения).</p>
+<p>Результат: документ «Архитектура: Интернет-магазин» + C4-диаграммы.</p>
+<ol>
+<li>Архитектурные паттерны</li>
+<li>Монолит vs Микросервисы</li>
+<li>Слоистая архитектура</li>
+<li>
+<p>Практика: проектирование системы интернет-магазина</p>
+</li>
+<li>
+<p>Компоненты информационных систем</p>
+</li>
+<li>Кэши (Redis)</li>
+<li>Очереди сообщений</li>
+<li>Поисковые системы</li>
+<li>
+<p>Практика: добавление кэша в API</p>
+</li>
+<li>
+<p>Безопасность и аутентификация</p>
+</li>
+<li>OAuth, JWT</li>
+<li>Защита API</li>
+<li>Практика: добавление авторизации</li>
+</ol>
+<p>Тема: аутентификация/авторизация (OAuth2, JWT), шифрование, OWASP-принципы; логирование, метрики, трассировка (Prometheus, Grafana, Jaeger), SLO/SLI/ SLA.</p>
+<p>Что делать: добавить аутентификацию в приложение; настроить сбор логов и график метрик; написать простые SLO.</p>
+<h2 id="security-checklist">Результат: security checklist + дашборд с метриками.</h2>
+<ol>
+<li>
+<p>Инфраструктура и DevOps</p>
+</li>
+<li>
+<p>Контейнеризация и развертывание</p>
+</li>
+<li>Docker, Docker Compose</li>
+<li>
+<p>Практика: упаковка приложения в контейнер</p>
+</li>
+<li>
+<p>Мониторинг и документация</p>
+</li>
+<li>Логирование, метрики</li>
+<li>Документирование архитектуры</li>
+<li>Практика: создание полной документации системы</li>
+</ol>
+<p>Тема: контейнеризация (Docker), оркестрация (Kubernetes), CI/CD, IaaC (Terraform), балансировка нагрузки, CDN, контейнерные паттерны, деплой стратегии (blue/green, canary).</p>
+<p>Что делать: контейнеризировать приложение, написать простой pipeline (GitHub Actions/GitLab CI), развернуть в облаке или локально (k3s/minikube).</p>
+<p>Результат: pipeline + манифесты; check-list для продакшен-деплоя.</p>
+<p>данные и интеграция</p>
+<p>Интеграционные паттерны
+   - Синхронная vs асинхронная коммуникация
+   - Паттерны отказоустойчивости
+   - Практика: проектирование отказоустойчивой системы</p>
+<p>Тема: архитектура данных, ETL/ELT, репликация, sharding, CAP, ACID vs BASE, message brokers (RabbitMQ/Kafka), API gateway, REST vs gRPC, контрактное тестирование.</p>
+<p>Что делать: реализовать простую event-driven интеграцию: сервис A публикует события в Kafka → сервис B обрабатывает.</p>
+<p>Результат: диаграмма потоков данных + метрики задержки/пропускной способности.</p>
+<p>Финалочка</p>
+<p>Проект 1: перевод простого монолита в микросервисы (микро-миграция) — план + PoC.</p>
+<p>Проект 2: проектирование enterprise-системы (диаграммы C4, ADR, нефункц. требования, cost/benefit).</p>
+<p>Результат: готовое портфолио: architecture doc + диаграммы + ссылки на репозитории.</p>
+<p>Для улублённого изучения:</p>
+<ol>
+<li>Single Node Storage (Storage,  Index, Concurrency Control, Recovery)</li>
+<li>Replication </li>
+<li>Sharding/Partitioning</li>
+<li>Consistency, Consensus </li>
+<li>Networking </li>
+<li>Observability, Discovery </li>
+<li>Architecture Patterns </li>
+</ol>
+<p>Ключевые артефакты, которые нужно научиться делать</p>
+<p>C4-диаграммы уровней (System Context, Container, Component, Code).</p>
+<p>Architecture Decision Records (ADR) — формализованные решения.</p>
+<p>Нефункциональные требования (performance, scalability, availability, security).</p>
+<p>Инфраструктура как код (Terraform, k8s manifests).</p>
+<p>CI/CD pipeline + тесты (unit, integration, contract).</p>
+<p>Мониторинг/алертинг + SLOs.</p>
+<p>Инструменты и технологии для практики</p>
+<p>Языки/фреймворки: любое знакомое (Node/Python/Java/C#).</p>
+<p>БД: PostgreSQL, Redis.</p>
+<p>Message brokers: RabbitMQ, Kafka (по желанию).</p>
+<p>Контейнеры/оркестрация: Docker, Kubernetes (minikube/k3s).</p>
+<p>CI/CD: GitHub Actions / GitLab CI.</p>
+<p>IaaC: Terraform.</p>
+<p>Моделирование/диаграммы: PlantUML, Structurizr, draw.io.</p>
+<p>Observability: Prometheus, Grafana, Jaeger.</p>
+<p>Безопасность: ознакомься с OWASP Top 10.</p>
+<p>Рекомендуемые книги и материалы (обязательные минимум)</p>
+<p>«Designing Data-Intensive Applications» — для данных и систем обработки.</p>
+<p>«Software Architecture in Practice» — принципы архитектуры.</p>
+<p>«Fundamentals of Software Architecture» — практические паттерны.</p>
+<p>Блоги: Martin Fowler, AWS Well-Architected (чтобы понимать cloud patterns).
+(Этого достаточно, чтобы не тратить время на тонны материалов — читать глубже по необходимости.)</p>
+<p>Книга: "Архитектура корпоративных программных приложений" М. Фаулера</p>
+<p>Курс: "System Design" на educative.io</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2025 bazovichki
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.path", "toc.integrate", "content.tabs.link"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

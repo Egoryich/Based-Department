@@ -1,0 +1,18 @@
+.md-main{
+  background-color: #202326; /* Базовый фон */
+}
+.md-main__inner{
+  background-color: #25282b; /* Фон панели */
+  margin-top: 0;
+}
+.md-content{
+  background-color: #2e3236; /* Фон контента */
+}
+
+.md-nav--primary .md-nav__title{
+  background: transparent !important; /* Делаем фон прозрачным */
+  box-shadow: none !important; /* Убираем тень/градиент */
+}
+.md-header--shadow{
+  box-shadow: none !important; /* Убираем тень/градиент */
+}
